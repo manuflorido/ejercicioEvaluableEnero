@@ -1,0 +1,19 @@
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+ul{
+    text-align: center;
+}
+
+li{
+    display: inline;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid black;
+    padding: 1%;
+}
