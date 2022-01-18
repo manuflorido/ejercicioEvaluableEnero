@@ -1,68 +1,66 @@
 <?php
 //Creación de los arrays necesarios para el ejercicio
-/*$vueloDestino=array(
-    "Vueling-AE12" => "Milán",
-    "Volotea-EA21" => "Roma",
-    "Iberia-WE44" => "Estambul",
-    "Ryanair-EW44" => "Madrid",
-    "Vueling-ZK87" => "Lima",
-    "Volotea-UA21" => "Bilbao",
-    "Iberia-WH44" => "Roma",
-    "Ryanair-EL00" => "Madrid",
-    "Vueling-AE12" => "Roma",
-    "Volotea-EA21" => "Roma"
-)
+$vueloDestino=array(
+    array("Avion" => "Vueling-AE12","Destino" => "Milán" ),
+    array("Avion" => "Volotea-EA21","Destino" => "Roma" ),
+    array("Avion" => "Iberia-WE44","Destino" => "Estambul" ),
+    array("Avion" => "Ryanair-EW44","Destino" => "Madrid" ),
+    array("Avion" => "Vueling-ZK87","Destino" => "Lima" ),
+    array("Avion" => "Volotea-UA21","Destino" => "Bilbao" ),
+    array("Avion" => "Iberia-WH44","Destino" => "Roma" ),
+    array("Avion" => "Ryanair-EL00","Destino" => "Madrid" ),
+    array("Avion" => "Vueling-AE12","Destino" => "Roma" ),
+    array("Avion" => "Volotea-EA21","Destino" => "Roma" )
+);
 
 $vueloFabricante=array(
-    "Vueling-AE12" => "Boeing",
-    "Volotea-EA21" => "Airbus",
-    "Iberia-WE44" => "Airbus",
-    "Ryanair-EW44" => "Boeing",
-    "Vueling-ZK87" => "Airbus",
-    "Volotea-UA21" => "Boeing",
-    "Iberia-WH44" => "Boeing",
-    "Ryanair-EL00" => "Airbus"
-)
+    array("Avion" => "Vueling-AE12","Fabricante" => "Boeing" ),
+    array("Avion" => "Volotea-EA21","Fabricante" => "Airbus" ),
+    array("Avion" => "Iberia-WE44","Fabricante" => "Airbus" ),
+    array("Avion" => "Ryanair-EW44","Fabricante" => "Boeing" ),
+    array("Avion" => "Vueling-ZK87","Fabricante" => "Airbus" ),
+    array("Avion" => "Volotea-UA21","Fabricante" => "Boeing" ),
+    array("Avion" => "Iberia-WH44","Fabricante" => "Boeing" ),
+    array("Avion" => "Ryanair-EL00","Fabricante" => "Airbus" )
+);
 
 $vueloDuracion=array(
-    "Vueling-AE12" => "120",
-    "Volotea-EA21" => "100",
-    "Iberia-WE44" => "340",
-    "Ryanair-EW44" => "45",
-    "Vueling-ZK87" => "600",
-    "Volotea-UA21" => "65",
-    "Iberia-WH44" => "90",
-    "Ryanair-EL00" => "50",
-    "Vueling-AE12" => "115",
-    "Volotea-EA21" => "100",
-    "Iberia-WE44" => "85",
-    "Ryanair-EW44" => "360"
-)
-*/
+    array("Avion" => "Vueling-AE12","Minutos" => "120" ),
+    array("Avion" => "Volotea-EA21","Minutos" => "100" ),
+    array("Avion" => "Iberia-WE44","Minutos" => "340" ),
+    array("Avion" => "Ryanair-EW44","Minutos" => "45" ),
+    array("Avion" => "Vueling-ZK87","Minutos" => "600" ),
+    array("Avion" => "Volotea-UA21","Minutos" => "65" ),
+    array("Avion" => "Iberia-WH44","Minutos" => "90" ),
+    array("Avion" => "Ryanair-EL00","Minutos" => "50" ),
+    array("Avion" => "Vueling-AE12","Minutos" => "115" ),
+    array("Avion" => "Volotea-EA21","Minutos" => "100" ),
+    array("Avion" => "Iberia-WE44","Minutos" => "85" ),
+    array("Avion" => "Ryanair-EW44","Minutos" => "360" )
+);
+
 $vueloPasajeros=array(
-    array('Vuelo' => "Vueling-AE12","Pasajeros" => "90" ),
-    array('Vuelo' => "Volotea-EA21","Pasajeros" => "75" ),
-    array('Vuelo' => "Iberia-WE44","Pasajeros" => "100" ),
-    array('Vuelo' => "Ryanair-EW44","Pasajeros" => "60" ),
-    array('Vuelo' => "Vueling-ZK87","Pasajeros" => "77" ),
-    array('Vuelo' => "Volotea-UA21","Pasajeros" => "93" ),
-    array('Vuelo' => "Iberia-WH44","Pasajeros" => "86" ),
-    //"Ryanair-EL00" => "75",
-    array('Vuelo' => "Vueling-AE12","Pasajeros" => "87" ),
-    /*
-    "Volotea-EA21" => "97",
-    "Iberia-WE44" => "81",
-    "Ryanair-EW44" => "75",
-    "Vueling-ZK87" => "87",
-    "Volotea-UA21" => "90",
-    "Iberia-WH44" => "84",
-    "Ryanair-EL00" => "67",
-    "Vueling-AE12" => "86",
-    "Volotea-EA21" => "66",
-    "Iberia-WE44" => "40",
-    "Ryanair-EW44" => "77",
-    "Vueling-ZK87" => "82"
-    */
-)
+    array("Avion" => "Vueling-AE12","Pasajeros" => "90" ),
+    array("Avion" => "Volotea-EA21","Pasajeros" => "75" ),
+    array("Avion" => "Iberia-WE44","Pasajeros" => "100" ),
+    array("Avion" => "Ryanair-EW44","Pasajeros" => "60" ),
+    array("Avion" => "Vueling-ZK87","Pasajeros" => "77" ),
+    array("Avion" => "Volotea-UA21","Pasajeros" => "93" ),
+    array("Avion" => "Iberia-WH44","Pasajeros" => "86" ),
+    array("Avion" => "Ryanair-EL00","Pasajeros" => "75" ),
+    array("Avion" => "Vueling-AE12","Pasajeros" => "87" ),
+    array("Avion" => "Volotea-EA21","Pasajeros" => "97" ),
+    array("Avion" => "Iberia-WE44","Pasajeros" => "81" ),
+    array("Avion" => "Ryanair-EW44","Pasajeros" => "75" ),
+    array("Avion" => "Vueling-ZK87","Pasajeros" => "87" ),
+    array("Avion" => "Volotea-UA21","Pasajeros" => "90" ),
+    array("Avion" => "Iberia-WH44","Pasajeros" => "84" ),
+    array("Avion" => "Ryanair-EL00","Pasajeros" => "67" ),
+    array("Avion" => "Vueling-AE12","Pasajeros" => "86" ),
+    array("Avion" => "Volotea-EA21","Pasajeros" => "66" ),
+    array("Avion" => "Iberia-WE44","Pasajeros" => "40" ),
+    array("Avion" => "Ryanair-EW44","Pasajeros" => "77" ),
+    array("Avion" => "Vueling-ZK87","Pasajeros" => "82" )
+);
 
 ?>
