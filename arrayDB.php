@@ -1,6 +1,6 @@
 <?php
 //Creación de los arrays necesarios para el ejercicio
-$vueloDestino=array(
+/*$vueloDestino=array(
     "Vueling-AE12" => "Milán",
     "Volotea-EA21" => "Roma",
     "Iberia-WE44" => "Estambul",
@@ -38,17 +38,18 @@ $vueloDuracion=array(
     "Iberia-WE44" => "85",
     "Ryanair-EW44" => "360"
 )
-
+*/
 $vueloPasajeros=array(
-    "Vueling-AE12" => "90",
-    "Volotea-EA21" => "75",
-    "Iberia-WE44" => "100",
-    "Ryanair-EW44" => "60",
-    "Vueling-ZK87" => "77",
-    "Volotea-UA21" => "93",
-    "Iberia-WH44" => "86",
-    "Ryanair-EL00" => "75",
-    "Vueling-AE12" => "87",
+    array('Vuelo' => "Vueling-AE12","Pasajeros" => "90" ),
+    array('Vuelo' => "Volotea-EA21","Pasajeros" => "75" ),
+    array('Vuelo' => "Iberia-WE44","Pasajeros" => "100" ),
+    array('Vuelo' => "Ryanair-EW44","Pasajeros" => "60" ),
+    array('Vuelo' => "Vueling-ZK87","Pasajeros" => "77" ),
+    array('Vuelo' => "Volotea-UA21","Pasajeros" => "93" ),
+    array('Vuelo' => "Iberia-WH44","Pasajeros" => "86" ),
+    //"Ryanair-EL00" => "75",
+    array('Vuelo' => "Vueling-AE12","Pasajeros" => "87" ),
+    /*
     "Volotea-EA21" => "97",
     "Iberia-WE44" => "81",
     "Ryanair-EW44" => "75",
@@ -61,6 +62,7 @@ $vueloPasajeros=array(
     "Iberia-WE44" => "40",
     "Ryanair-EW44" => "77",
     "Vueling-ZK87" => "82"
+    */
 )
 
 ?>
