@@ -4,6 +4,7 @@ include_once 'funciones.php';
 
 $id=$_POST["operacion"];
 
+echo "Avión: " . $id . "<br>";
 compania($vueloCompania,$id);
 mediapasajeros($vueloPasajeros,$id);
 ultdes($vueloDestino, $id);
