@@ -24,6 +24,17 @@ $vueloFabricante=array(
     array("Avion" => "Ryanair-EL00","Fabricante" => "Airbus" )
 );
 
+$vueloCompania=array(
+    array("Avion" => "Vueling-AE12","Compania" => "Vueling" ),
+    array("Avion" => "Volotea-EA21","Compania" => "Volotea" ),
+    array("Avion" => "Iberia-WE44","Compania" => "Iberia" ),
+    array("Avion" => "Ryanair-EW44","Compania" => "Ryanair" ),
+    array("Avion" => "Vueling-ZK87","Compania" => "Vueling" ),
+    array("Avion" => "Volotea-UA21","Compania" => "Volotea" ),
+    array("Avion" => "Iberia-WH44","Compania" => "Iberia" ),
+    array("Avion" => "Ryanair-EL00","Compania" => "Ryanair" )
+);
+
 $vueloDuracion=array(
     array("Avion" => "Vueling-AE12","Minutos" => "120" ),
     array("Avion" => "Volotea-EA21","Minutos" => "100" ),
