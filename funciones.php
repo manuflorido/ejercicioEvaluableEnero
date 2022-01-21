@@ -53,7 +53,7 @@ foreach ($vueloDestino as $destino) {
     
     if ($avion==$id) {
         $dest=$destino["Destino"];
-        echo $dest . " ";
+        echo $dest . "//";
     }
 }
 echo "<br>";
@@ -65,12 +65,58 @@ function mintot($vueloDuracion, $id){
 foreach ($vueloDuracion as $duracion) {
 $avion=$duracion["Avion"];
 
-if ($avion==$id) {
-    $dur=$duracion["Minutos"];
-    $numero=$numero+$dur;
-}
+    if ($avion==$id) {
+        $dur=$duracion["Minutos"];
+        $numero=$numero+$dur;
+    }
 }
 echo "Minutos totales de vuelo: " . $numero;
 }
 
+//FUNCION NUMERO TOTAL DE CIUDADES
+function ciutot($vueloDestino){
+//Crea un array sin que se repitan los campos de la columna 'Destino'
+$arrayUnique=array_unique(array_column($vueloDestino, 'Destino'));
+//Hace intersección entre el array de arriba y el original.
+$arrayLimpio=array_intersect_key($vueloDestino,$arrayUnique);
+echo "Número de ciudades a las que se ha viajado; " . count($arrayLimpio) . "<br>";
+}
+
+//FUNCION VECES QUE SE HA IDO A UNA CIUDAD
+function sumciu($vueloDestino){
+    $cuentaRoma=0;
+    $cuentaMilan=0;
+    $cuentaMad=0;
+    $cuentaLim=0;
+    $cuentaEsta=0;
+    $cuentaBil=0;
+foreach ($vueloDestino as $destino) {
+    $ciudad=$destino["Destino"];
+    if ($ciudad=='Roma') {
+        $cuentaRoma++;
+    }
+    if ($ciudad=='Milán') {
+        $cuentaMilan++;
+    }
+    if ($ciudad=='Estambul') {
+        $cuentaEsta++;
+    }
+    if ($ciudad=='Madrid') {
+        $cuentaMad++;
+    }
+    if ($ciudad=='Lima') {
+        $cuentaLim++;
+    }
+    if ($ciudad=='Bilbao') {
+        $cuentaBil++;
+    }
+}
+echo "Número que se ha ido a una ciudad determinada: " . "<br>";
+    echo "Roma: " . $cuentaRoma . "<br>";
+    echo "Milán: " . $cuentaMilan . "<br>";
+    echo "Estambul: " . $cuentaEsta . "<br>";
+    echo "Madrid: " . $cuentaMad . "<br>";
+    echo "Lima: " . $cuentaLim . "<br>";
+    echo "Bilbao: " . $cuentaBil . "<br>";
+}
 ?>
