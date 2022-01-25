@@ -79,10 +79,10 @@ function ciutot($vueloDestino){
 $arrayUnique=array_unique(array_column($vueloDestino, 'Destino'));
 //Hace intersección entre el array de arriba y el original.
 $arrayLimpio=array_intersect_key($vueloDestino,$arrayUnique);
-echo "Número de ciudades a las que se ha viajado; " . count($arrayLimpio) . "<br>";
+echo "Número de ciudades a las que se ha viajado: " . count($arrayLimpio) . "<br>";
 }
 
-//FUNCION VECES QUE SE HA IDO A UNA CIUDAD
+//FUNCION VECES QUE SE HA IDO A UNA CIUDAD 
 function sumciu($vueloDestino){
     $cuentaRoma=0;
     $cuentaMilan=0;
@@ -118,5 +118,33 @@ echo "Número que se ha ido a una ciudad determinada: " . "<br>";
     echo "Madrid: " . $cuentaMad . "<br>";
     echo "Lima: " . $cuentaLim . "<br>";
     echo "Bilbao: " . $cuentaBil . "<br>";
+
+//ffhaddddddddddddddddd
+
+$ciudades=array(
+    array("Numero" => $cuentaRoma, "Ciudad" => "Roma" ),
+    array("Numero" => $cuentaMilan, "Ciudad" => "Milán" ),
+    array("Numero" => $cuentaEsta, "Ciudad" => "Estambul" ),
+    array("Numero" => $cuentaMad, "Ciudad" => "Madrid" ),
+    array("Numero" => $cuentaLim, "Ciudad" => "Lima" ),
+    array("Numero" => $cuentaBil, "Ciudad" => "Bilbao" )
+
+);
+
+rsort($ciudades);
+echo "La ciudad más visitada es: ";
+$arrayMax=(array_column($ciudades, 'Ciudad'));
+$maxVisit = $arrayMax[0];
+echo $maxVisit . "<br>";
+
+echo "Las ciudades menos visitadas son: ";
+$minVisit = array_slice($ciudades,3);
+foreach ($minVisit as $minimo) {
+    $minCiu=$minimo["Ciudad"];
+    echo $minCiu . "//";
 }
+
+
+}
+
 ?>
