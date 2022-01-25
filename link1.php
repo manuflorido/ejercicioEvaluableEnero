@@ -1,15 +1,16 @@
 <?php
-include_once 'arrayDB.php';
-include_once 'funciones.php';
+require 'arrayDB.php';
+require 'funciones.php';
 
 $id=$_POST["operacion"];
 
 echo "Avión: " . $id . "<br>";
 compania($vueloCompania,$id);
-mediapasajeros($vueloPasajeros,$id);
-ultdes($vueloDestino, $id);
+mediaPasajeros($vueloPasajeros,$id);
+echo "Últimos destinos: ";
+destinos($vueloDestino, $id);
 fabricante($vueloFabricante,$id);
-mintot($vueloDuracion, $id);
+minTot($vueloDuracion, $id);
 
 
 ?>
