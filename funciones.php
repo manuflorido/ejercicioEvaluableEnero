@@ -69,7 +69,7 @@ $avion=$duracion["Avion"];
         $numero=$numero+$dur;
     }
 }
-echo "Minutos totales de vuelo: " . $numero;
+echo "Minutos totales de vuelo: " . $numero . "<br>";
 }
 
 //FUNCION NUMERO TOTAL DE CIUDADES
@@ -149,7 +149,7 @@ foreach ($minVisit as $minimo) {
 
 }
 
-//FUNCION PARA EL MEDIA DE HORAS VOLADAS
+//FUNCION PARA EL MEDIA DE HORAS VOLADAS TOTALES
 function mediaHoras($vueloDuracion){
     $numero=0;
     $contador=0;
@@ -241,4 +241,35 @@ $arrayMax=(array_column($ciudades, 'Ciudad'));
 $maxVisit = $arrayMax[0];
 echo $maxVisit . "<br>";
 }
+
+//FUNCION PARA EL MEDIA DE HORAS VOLADAS
+function mediaHorasAvion($vueloDuracion,$id){
+    $numero=0;
+    $contador=0;
+    foreach ($vueloDuracion as $duracion) {
+        $minutos=$duracion["Minutos"];
+        $avion=$duracion["Avion"];
+        if ($avion==$id) {
+            $numero=$numero+$minutos;
+            $contador++;
+        }
+    }
+    $numero=$numero/$contador/60;
+    echo "Media de horas voladas: " . $numero . " horas<br>";
+}
+
+function totalPasajerosAvion($vueloPasajeros, $id){
+    $numero=0;
+    foreach ($vueloPasajeros as $pasajeros) {
+        $vuelesito=$pasajeros["Avion"];
+        $pasajerito=$pasajeros["Pasajeros"];
+        
+        if ($vuelesito==$id) {
+            $numero=$numero+$pasajerito;    
+        }
+    
+    }
+    $numero=$numero;
+    echo "Total de pasajeros: " . $numero . "<br>";
+    }
 ?>

@@ -1,9 +1,21 @@
 h1{
     text-align: center;
+    background-color: rgb(71, 179, 251);
+    color: white;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
 }
 
 h2{
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+    background-color: rgb(71, 179, 251);
+    color: white;
+    width: 30%;
+    border-radius: 15px;
 }
 
 ul{
@@ -12,8 +24,24 @@ ul{
 
 li{
     display: inline;
-    margin-left: 5%;
-    margin-right: 5%;
-    border: 1px solid black;
-    padding: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 5px;
+    background-color: rgb(71, 179, 251);
+    border-radius: 15px;
+}
+
+li:hover{
+    size: 17px;
+    font-weight: bold;
+}
+
+a{
+    color: white;
+}
+
+body{
+    background-image: url("f.elconfidencial.com_original_4e6_f84_6ab_4e6f846ab4a63718c9220cdf7c3143a0.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
