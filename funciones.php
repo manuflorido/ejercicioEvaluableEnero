@@ -69,7 +69,7 @@ $avion=$duracion["Avion"];
         $numero=$numero+$dur;
     }
 }
-echo "Minutos totales de vuelo: " . $numero . "<br>";
+echo "Minutos totales de vuelo: " . $numero . " minutos <br>";
 }
 
 //FUNCION NUMERO TOTAL DE CIUDADES
@@ -110,7 +110,7 @@ foreach ($vueloDestino as $destino) {
         $cuentaBil++;
     }
 }
-echo "Número que se ha ido a una ciudad determinada: " . "<br>";
+echo "Veces visitadas cada ciudad: " . "<br>";
     echo "Roma: " . $cuentaRoma . "<br>";
     echo "Milán: " . $cuentaMilan . "<br>";
     echo "Estambul: " . $cuentaEsta . "<br>";
@@ -230,13 +230,13 @@ $ciudades=array(
 );
 
 rsort($ciudades);
-echo "Destino con más conexiones es: ";
+echo "Destino con más conexiones : ";
 $arrayMax=(array_column($ciudades, 'Ciudad'));
 $maxVisit = $arrayMax[0];
 echo $maxVisit . "<br>";
 
 asort($ciudades);
-echo "Destino con menos conexiones es: ";
+echo "Destino con menos conexiones : ";
 $arrayMax=(array_column($ciudades, 'Ciudad'));
 $maxVisit = $arrayMax[0];
 echo $maxVisit . "<br>";
@@ -258,6 +258,23 @@ function mediaHorasAvion($vueloDuracion,$id){
     echo "Media de horas voladas: " . $numero . " horas<br>";
 }
 
+function mediaPasajerosAvion($vueloPasajeros, $id){
+    $numero=0;
+    $contador=0;
+    foreach ($vueloPasajeros as $pasajeros) {
+        $vuelesito=$pasajeros["Avion"];
+        $pasajerito=$pasajeros["Pasajeros"];
+        
+        if ($vuelesito==$id) {
+            $numero=$numero+$pasajerito;
+            $contador++;    
+        }
+    
+    }
+    $numero=$numero/$contador;
+    echo "Media de pasajeros: " . $numero . " pasajeros <br>";
+    }
+
 function totalPasajerosAvion($vueloPasajeros, $id){
     $numero=0;
     foreach ($vueloPasajeros as $pasajeros) {
@@ -269,7 +286,7 @@ function totalPasajerosAvion($vueloPasajeros, $id){
         }
     
     }
-    $numero=$numero;
-    echo "Total de pasajeros: " . $numero . "<br>";
+    echo "Total de pasajeros: " . $numero . " pasajeros <br>";
     }
+//TRABAJO FINALIZADO 28/01/2022 POR MANUEL FLORIDO
 ?>

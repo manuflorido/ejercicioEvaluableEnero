@@ -1,0 +1,30 @@
+.body{
+    background-color: rgb(132, 220, 250);
+}
+form{
+    width: 30%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+fieldset{
+    border-color: #1a5dee;
+    border-width: 4px;
+}
+#resolv{
+    background-color: rgb(115, 238, 115);
+    color: black;
+}
+p{
+    text-align: center;
+    border: 1px solid black;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.centrado{
+    text-align: center;
+}
+/*TRABAJO FINALIZADO 28/01/2022 POR MANUEL FLORIDO*/
